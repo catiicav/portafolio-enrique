@@ -12429,6 +12429,173 @@ footer{
 }
 </style>
 
+
+<style id="ecb-mobile-cordillera-reference-final">
+/* =========================================================
+   VERSIÓN MÓVIL — CORDILLERA/MINA VISIBLE COMO EN REFERENCIA
+   - mantiene la composición aprobada
+   - devuelve la mina detrás del retrato
+   - evita el fondo celeste vacío
+   - integra retrato + paisaje antes de las métricas
+   ========================================================= */
+
+@media (max-width:680px){
+
+  /* La zona de retrato se convierte en una escena completa */
+  .ecb3-portrait{
+    position:relative !important;
+    z-index:8 !important;
+    height:500px !important;
+    margin-top:10px !important;
+    overflow:hidden !important;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(238,244,245,.94) 0%,
+        rgba(230,239,241,.66) 12%,
+        rgba(218,230,231,.18) 26%,
+        transparent 38%
+      ) !important;
+  }
+
+  /* La imagen de mina/cordillera vuelve a ocupar visualmente la escena móvil */
+  .ecb3-mine{
+    position:absolute !important;
+    z-index:3 !important;
+    left:0 !important;
+    right:0 !important;
+    top:auto !important;
+    bottom:0 !important;
+    width:100% !important;
+    height:510px !important;
+    object-fit:cover !important;
+    object-position:56% 52% !important;
+    transform:none !important;
+    opacity:1 !important;
+    filter:
+      brightness(1.015)
+      contrast(1.08)
+      saturate(1.04)
+      sepia(.015) !important;
+
+    /* La montaña aparece suavemente desde arriba, como en el mockup */
+    -webkit-mask-image:linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(0,0,0,.18) 5%,
+      rgba(0,0,0,.60) 12%,
+      #000 22%,
+      #000 100%
+    ) !important;
+    mask-image:linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(0,0,0,.18) 5%,
+      rgba(0,0,0,.60) 12%,
+      #000 22%,
+      #000 100%
+    ) !important;
+  }
+
+  /* El lavado global ya no tapa el paisaje cuando empieza el retrato */
+  .ecb3-reading-wash{
+    background:
+      linear-gradient(180deg,
+        rgba(250,247,241,.985) 0%,
+        rgba(250,247,241,.985) 43%,
+        rgba(245,247,245,.94) 56%,
+        rgba(235,241,241,.70) 65%,
+        rgba(224,234,236,.28) 72%,
+        transparent 80%) !important;
+  }
+
+  /* El retrato se coloca claramente sobre la mina */
+  .ecb3-portrait img{
+    position:relative !important;
+    z-index:6 !important;
+    width:auto !important;
+    height:455px !important;
+    max-width:none !important;
+    object-fit:contain !important;
+    object-position:center bottom !important;
+    transform:none !important;
+    opacity:1 !important;
+    filter:
+      brightness(1.01)
+      contrast(.985)
+      saturate(.985)
+      sepia(.008)
+      drop-shadow(0 15px 24px rgba(7,34,52,.12)) !important;
+
+    /* Mantiene la integración inferior sin borrar demasiado el cuerpo */
+    -webkit-mask-image:linear-gradient(
+      to bottom,
+      #000 0%,
+      #000 92%,
+      rgba(0,0,0,.98) 97%,
+      transparent 100%
+    ) !important;
+    mask-image:linear-gradient(
+      to bottom,
+      #000 0%,
+      #000 92%,
+      rgba(0,0,0,.98) 97%,
+      transparent 100%
+    ) !important;
+  }
+
+  /* Menos halo celeste; más integración con el paisaje real */
+  .ecb3-portrait-glow{
+    z-index:5 !important;
+    left:8% !important;
+    right:8% !important;
+    top:18% !important;
+    bottom:4% !important;
+    opacity:.36 !important;
+    filter:blur(28px) !important;
+    background:
+      radial-gradient(
+        ellipse at 50% 44%,
+        rgba(228,225,211,.30) 0%,
+        rgba(175,190,190,.10) 46%,
+        transparent 72%
+      ) !important;
+  }
+
+  .ecb3-portrait::before{
+    z-index:4 !important;
+    left:8% !important;
+    right:8% !important;
+    top:31% !important;
+    bottom:0 !important;
+    opacity:.32 !important;
+    filter:blur(24px) !important;
+  }
+
+  /* Métricas pegadas visualmente a la escena, sin franja celeste intermedia */
+  .ecb3-metrics-zone{
+    margin-top:0 !important;
+    border-top:0 !important;
+  }
+}
+
+/* iPhone angosto */
+@media (max-width:390px){
+  .ecb3-portrait{
+    height:460px !important;
+  }
+
+  .ecb3-mine{
+    height:470px !important;
+    object-position:58% 54% !important;
+  }
+
+  .ecb3-portrait img{
+    height:425px !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <header class="nav" id="mainNav">
