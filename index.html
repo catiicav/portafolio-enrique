@@ -12002,6 +12002,433 @@ footer{
 }
 </style>
 
+
+<style id="ecb-mobile-approved-mockup">
+/* =========================================================
+   VERSIÓN MÓVIL APROBADA
+   Inspirada en el mockup validado:
+   - header ejecutivo compacto
+   - título y texto sobre fondo claro, sin foto detrás
+   - mina empieza después de los CTA
+   - retrato integrado dentro del paisaje
+   - métricas 2x2 al pie
+   ========================================================= */
+
+@media (max-width:680px){
+
+  :root{
+    --m-ink:#0d2940;
+    --m-copper:#c86f2c;
+    --m-blue:#0d3553;
+    --m-blue-2:#0a2a43;
+    --m-paper:#f8f5ef;
+  }
+
+  html,body{
+    overflow-x:hidden !important;
+    background:var(--m-paper) !important;
+  }
+
+  /* ---------- HERO ---------- */
+  .ecb3-hero{
+    height:auto !important;
+    min-height:0 !important;
+    max-height:none !important;
+    overflow:hidden !important;
+    background:
+      linear-gradient(180deg,#fbf7f1 0%,#eef4f6 47%,#dceaf0 100%) !important;
+  }
+
+  .ecb3-scene{
+    position:relative !important;
+    display:flex !important;
+    flex-direction:column !important;
+    min-height:0 !important;
+    height:auto !important;
+    overflow:hidden !important;
+  }
+
+  /* Quitamos la mina como fondo global del hero.
+     La volveremos a mostrar solo en la zona del retrato. */
+  .ecb3-mine{
+    position:absolute !important;
+    left:0 !important;
+    right:0 !important;
+    top:auto !important;
+    bottom:0 !important;
+    width:100% !important;
+    height:500px !important;
+    object-fit:cover !important;
+    object-position:58% 50% !important;
+    transform:none !important;
+    opacity:1 !important;
+    filter:
+      brightness(.99)
+      contrast(1.08)
+      saturate(1.06)
+      sepia(.018) !important;
+    -webkit-mask-image:linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(0,0,0,.22) 5%,
+      rgba(0,0,0,.82) 14%,
+      #000 24%,
+      #000 100%
+    ) !important;
+    mask-image:linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(0,0,0,.22) 5%,
+      rgba(0,0,0,.82) 14%,
+      #000 24%,
+      #000 100%
+    ) !important;
+  }
+
+  .ecb3-reading-wash{
+    position:absolute !important;
+    inset:0 !important;
+    background:
+      linear-gradient(180deg,
+        rgba(250,247,241,.98) 0%,
+        rgba(250,247,241,.98) 42%,
+        rgba(244,247,246,.97) 60%,
+        rgba(229,239,242,.84) 72%,
+        rgba(222,235,240,.42) 79%,
+        transparent 87%) !important;
+  }
+
+  .ecb3-warm-light{
+    opacity:.38 !important;
+  }
+
+  /* ---------- HEADER ---------- */
+  .ecb3-header{
+    position:relative !important;
+    z-index:30 !important;
+    min-height:118px !important;
+    padding:24px 22px 16px !important;
+    align-items:center !important;
+    background:transparent !important;
+  }
+
+  .ecb3-brand{
+    display:flex !important;
+    align-items:center !important;
+    gap:12px !important;
+    max-width:79% !important;
+  }
+
+  .ecb3-monogram{
+    transform:scale(.95) !important;
+    transform-origin:left center !important;
+    flex:0 0 auto !important;
+  }
+
+  .ecb3-brand-copy{
+    min-width:0 !important;
+  }
+
+  .ecb3-brand-name{
+    display:block !important;
+    font-size:1rem !important;
+    line-height:1.08 !important;
+    letter-spacing:.035em !important;
+    white-space:nowrap !important;
+  }
+
+  .ecb3-brand-subtitle{
+    display:block !important;
+    margin-top:5px !important;
+    color:var(--m-ink) !important;
+    font-size:.66rem !important;
+    line-height:1.35 !important;
+    letter-spacing:.11em !important;
+    text-transform:uppercase !important;
+    max-width:230px !important;
+  }
+
+  .ecb3-menu-toggle{
+    width:56px !important;
+    height:56px !important;
+    right:20px !important;
+    top:24px !important;
+    border-radius:18px !important;
+    background:rgba(255,255,255,.74) !important;
+    border:1px solid rgba(13,41,64,.10) !important;
+    backdrop-filter:blur(12px) !important;
+    -webkit-backdrop-filter:blur(12px) !important;
+  }
+
+  /* ---------- COPY ---------- */
+  .ecb3-copy{
+    position:relative !important;
+    z-index:10 !important;
+    top:auto !important;
+    left:auto !important;
+    width:auto !important;
+    max-width:none !important;
+    margin:0 !important;
+    padding:52px 22px 26px !important;
+  }
+
+  .ecb3-eyebrow{
+    display:flex !important;
+    align-items:center !important;
+    gap:14px !important;
+    margin:0 0 27px !important;
+    max-width:100% !important;
+    white-space:normal !important;
+    color:var(--m-copper) !important;
+    font-size:.73rem !important;
+    line-height:1.35 !important;
+    letter-spacing:.16em !important;
+  }
+
+  .ecb3-eyebrow span{
+    flex:0 0 38px !important;
+  }
+
+  .ecb3-copy h1{
+    max-width:100% !important;
+    margin:0 !important;
+    font-size:clamp(3rem,14.2vw,4.1rem) !important;
+    line-height:.93 !important;
+    letter-spacing:-.045em !important;
+  }
+
+  .ecb3-copy h1 span{
+    display:block !important;
+  }
+
+  .ecb3-rule{
+    width:50px !important;
+    margin:27px 0 24px !important;
+  }
+
+  .ecb3-copy p{
+    max-width:100% !important;
+    margin:0 !important;
+    color:var(--m-ink) !important;
+    font-size:1rem !important;
+    line-height:1.56 !important;
+  }
+
+  /* ---------- CTA ---------- */
+  .ecb3-actions{
+    display:grid !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:13px 20px !important;
+    margin-top:28px !important;
+    align-items:center !important;
+  }
+
+  .ecb3-actions .ecb3-primary{
+    grid-column:1 / -1 !important;
+    width:100% !important;
+    min-height:62px !important;
+    justify-content:center !important;
+    margin:0 !important;
+    border-radius:0 !important;
+    box-shadow:0 14px 32px rgba(194,104,45,.18) !important;
+  }
+
+  .ecb3-actions a:not(.ecb3-primary){
+    width:auto !important;
+    min-height:48px !important;
+    justify-content:flex-start !important;
+    padding:13px 0 10px !important;
+    margin:0 !important;
+    font-size:.95rem !important;
+    white-space:nowrap !important;
+    border-bottom:1px solid rgba(13,41,64,.18) !important;
+  }
+
+  /* ---------- RETRATO + MINA ---------- */
+  .ecb3-portrait{
+    position:relative !important;
+    z-index:8 !important;
+    right:auto !important;
+    left:auto !important;
+    top:auto !important;
+    bottom:auto !important;
+    width:100% !important;
+    max-width:none !important;
+    height:500px !important;
+    margin:12px 0 0 !important;
+    display:flex !important;
+    align-items:flex-end !important;
+    justify-content:center !important;
+    overflow:hidden !important;
+  }
+
+  .ecb3-portrait::before{
+    left:8% !important;
+    right:8% !important;
+    top:25% !important;
+    bottom:0 !important;
+    filter:blur(28px) !important;
+    opacity:.45 !important;
+  }
+
+  .ecb3-portrait::after{
+    display:none !important;
+  }
+
+  .ecb3-portrait-glow{
+    left:5% !important;
+    right:5% !important;
+    top:10% !important;
+    bottom:0 !important;
+    filter:blur(36px) !important;
+    opacity:.72 !important;
+  }
+
+  .ecb3-portrait img{
+    position:relative !important;
+    z-index:2 !important;
+    width:auto !important;
+    height:455px !important;
+    max-width:none !important;
+    object-fit:contain !important;
+    object-position:center bottom !important;
+    transform:none !important;
+    opacity:1 !important;
+    filter:
+      brightness(1.01)
+      contrast(.98)
+      saturate(.98)
+      sepia(.008)
+      drop-shadow(0 18px 28px rgba(7,34,52,.12)) !important;
+    -webkit-mask-image:linear-gradient(
+      to bottom,
+      #000 0%,
+      #000 89%,
+      rgba(0,0,0,.98) 95%,
+      transparent 100%
+    ) !important;
+    mask-image:linear-gradient(
+      to bottom,
+      #000 0%,
+      #000 89%,
+      rgba(0,0,0,.98) 95%,
+      transparent 100%
+    ) !important;
+  }
+
+  /* ---------- MÉTRICAS ---------- */
+  .ecb3-metrics-zone{
+    position:relative !important;
+    z-index:12 !important;
+    margin:0 !important;
+    padding:34px 22px 28px !important;
+    min-height:0 !important;
+    background:
+      linear-gradient(180deg,#0f3a5a 0%,#0b2e49 58%,#08243a 100%) !important;
+  }
+
+  .ecb3-metrics{
+    display:grid !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:0 !important;
+  }
+
+  .ecb3-metrics > div{
+    position:relative !important;
+    min-width:0 !important;
+    padding:22px 20px 24px 0 !important;
+  }
+
+  .ecb3-metrics > div:nth-child(2n){
+    padding-left:20px !important;
+    padding-right:0 !important;
+    border-left:1px solid rgba(255,255,255,.16) !important;
+  }
+
+  .ecb3-metrics > div:nth-child(n+3){
+    border-top:1px solid rgba(255,255,255,.16) !important;
+    padding-top:26px !important;
+  }
+
+  .ecb3-metrics > div::before{
+    content:"" !important;
+    position:absolute !important;
+    top:5px !important;
+    left:0 !important;
+    width:32px !important;
+    height:2px !important;
+    background:var(--m-copper) !important;
+  }
+
+  .ecb3-metrics > div:nth-child(2n)::before{
+    left:20px !important;
+  }
+
+  .ecb3-metric-top b{
+    font-size:1.78rem !important;
+    line-height:1 !important;
+    color:#fff !important;
+  }
+
+  .ecb3-metric-top strong{
+    display:block !important;
+    margin-top:6px !important;
+    color:#e89960 !important;
+    font-size:.69rem !important;
+    line-height:1.3 !important;
+    letter-spacing:.09em !important;
+  }
+
+  .ecb3-metrics p{
+    max-width:100% !important;
+    margin-top:8px !important;
+    color:rgba(235,242,244,.82) !important;
+    font-size:.75rem !important;
+    line-height:1.42 !important;
+  }
+
+  /* Evitar que otros media queries vuelvan a superponer elementos */
+  .ecb3-copy,
+  .ecb3-portrait,
+  .ecb3-metrics-zone{
+    transform:none !important;
+  }
+}
+
+/* iPhone angosto */
+@media (max-width:390px){
+  .ecb3-header{
+    padding-left:18px !important;
+    padding-right:18px !important;
+  }
+
+  .ecb3-brand-name{
+    font-size:.92rem !important;
+  }
+
+  .ecb3-brand-subtitle{
+    font-size:.61rem !important;
+  }
+
+  .ecb3-copy{
+    padding-left:18px !important;
+    padding-right:18px !important;
+  }
+
+  .ecb3-copy h1{
+    font-size:2.95rem !important;
+  }
+
+  .ecb3-portrait{
+    height:465px !important;
+  }
+
+  .ecb3-portrait img{
+    height:425px !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <header class="nav" id="mainNav">
